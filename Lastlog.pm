@@ -15,6 +15,9 @@
 #*****************************************************************************
 #*                                                                           *
 #*      $Log: Lastlog.pm,v $
+#*      Revision 1.2  2001/03/05 08:32:27  gellyfish
+#*      Addded note about Solaris fail
+#*
 #*      Revision 1.1  2001/02/13 07:54:30  gellyfish
 #*      Initial revision
 #*
@@ -137,7 +140,7 @@ use vars qw(
           DynaLoader
          );
 
-($VERSION) = q$Revision: 1.1 $ =~ /([\d.]+)/;
+($VERSION) = q$Revision: 1.2 $ =~ /([\d.]+)/;
 
 bootstrap Sys::Lastlog $VERSION;
 
@@ -206,6 +209,10 @@ long ago for audit and security purposes. If you are on such a system and
 care about this you should disable the rotation of this file. On a Red Hat
 system this will involve editing /etc/logrotate.conf to remove the file
 from the rotation.
+
+This should build on most systems given the notes in README but the author
+would appreciate being informed of any unusual systems where difficulty
+may be experienced.
 
 =head1 AUTHOR
 
